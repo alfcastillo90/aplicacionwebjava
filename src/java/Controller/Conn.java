@@ -19,7 +19,7 @@ import java.sql.Statement;
 public class Conn {
     
     private Connection con;
-    private String database = "administrativo";
+    private String database = "gourtmaps";
     private String host = "localhost";
     private String password = "";
     private String port = "3306";

@@ -48,8 +48,42 @@ public class Queries extends Conn {
         }
         return false;
     }
+    public boolean register(String firstName, String lastName, String email, String userName, String password){
+        PreparedStatement pst = null;
+        try{
+           
+            String query = "INSERT INTO users(firstname,lastname,email,username,password) VALUES(?,?,?,?,?)";
+            pst = getConnection().prepareStatement(query);
+            pst.setString(1, firstName);
+            pst.setString(2, lastName);
+            pst.setString(3, email);
+            pst.setString(4, userName);
+            pst.setString(5, password);
+            if(pst.executeUpdate() == 1){
+                return true;
+            }
+        }
+        catch(Exception e){
+            System.err.print("Error"+e);
+        }
+        finally{
+            try{
+                if(getConnection()!=null){
+                    getConnection().close();
+                }
+                if(pst != null){
+                    pst.close();
+                }
+            }
+            catch(Exception e){
+                 System.err.println("ERROR"+e);
+            }
+        }
+        return false;
+    }
     public static void main(String[] args){
         Queries qu = new Queries();
-        System.out.println(qu.authentication("alfredo", "1234"));
+        System.out.println(qu.register("Gabriela", "Rodriguez","gabriela33@gmail.com","mariga","1234"));
+        //System.out.println(qu.authentication("alfrassvetdam90", "alfrassvetdam90"));
     }
 }
