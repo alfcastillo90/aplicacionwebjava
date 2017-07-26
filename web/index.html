@@ -14,12 +14,13 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <script src="js/main.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <h1>Gourtmap users register</h1>
-                <form class="col m12" name="Name Input Form" action="login">
+                <h1>Gourtmap users login</h1>
+                <form class="col m12" id="form-login" method="post" action="login">
                     <div class="row">
                         <div class="col m12">
                             <div class="input-field">
@@ -38,7 +39,7 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
-                    <input class="waves-effect waves-light btn" type="submit" value="OK" />
+                    <input class="waves-effect waves-light btn" id="btn-login" type="button" value="OK" />
                 </form>
                 <br>
                 <a href="register.html">Create an account</a>

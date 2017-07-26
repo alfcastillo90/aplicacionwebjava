@@ -38,7 +38,7 @@ public class SingUp extends HttpServlet {
         String username = request.getParameter("username");
         Queries qu = new Queries();
         if(qu.register(firstname, lastname, email, username, password)){
-            response.sendRedirect("menu.html");
+            response.sendRedirect("menu.jsp");
         }
         else {
             response.sendRedirect("index.html");

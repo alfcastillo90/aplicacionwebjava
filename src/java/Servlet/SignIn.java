@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -36,7 +37,9 @@ public class SignIn extends HttpServlet {
         String password = request.getParameter("password");
         Queries qu = new Queries();
         if(qu.authentication(username, password)){
-            response.sendRedirect("menu.html");
+            HttpSession sessionObject = request.getSession(true);
+            sessionObject.setAttribute("username", username);
+            response.sendRedirect("menu.jsp");
         }
         else {
             response.sendRedirect("index.html");
