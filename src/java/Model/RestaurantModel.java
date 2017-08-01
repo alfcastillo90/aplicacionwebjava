@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 package Model;
-import Controller.RestaurantsController;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 /**
  *
  * @author Alfredo
  */
-public class Restaurant extends Conn{
+public class RestaurantModel extends Conn{
     
-    public boolean save(RestaurantsController rc){
+    public boolean save(Include.Restaurant rc){
         PreparedStatement pst = null;
         ResultSet rs = null;
         boolean flag = false;
@@ -54,5 +53,5 @@ public class Restaurant extends Conn{
         }
         return flag;
     }
-    
+   
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Include;
 
 import Model.Conn;
 
@@ -11,7 +11,7 @@ import Model.Conn;
  *
  * @author Alfredo
  */
-public class RestaurantsController {
+public class Restaurant {
     
     private float latitude;
     private float longitude; 
@@ -23,7 +23,7 @@ public class RestaurantsController {
     private String name;
     private String reviews;
     
-    public RestaurantsController(float latitude, float longitude, int id, int category, int city, String address1, String address2, String name, String reviews){
+    public Restaurant(float latitude, float longitude, int id, int category, int city, String address1, String address2, String name, String reviews){
         this.address1 = address1;
         this.address2 = address2;
         this.category = category;
