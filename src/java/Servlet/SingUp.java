@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Servlet;
-import Controller.Queries;
+import Model.Queries;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
