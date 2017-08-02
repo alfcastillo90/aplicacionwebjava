@@ -5,7 +5,6 @@
  */
 window.addEventListener('load',function(){
     document.getElementById('btn-login').addEventListener('click',function(){
-       alert("click");
        var username = document.getElementById("username").value;
        var password = document.getElementById("password").value;
        var flag = false;
